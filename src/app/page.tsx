@@ -19,22 +19,22 @@ export default function Home() {
                 <img src='/snake-1.png' className='w-full' />
               </div>
               <h1 className='relative w-fit tracking-tight text-balance mt-16 font-bold !leading-tight text-gray-900 text-5xl md:text-6xl lg:text-7xl'>
-                Your Image on a{' '}
-                <span className='bg-green-600 px-2 text-white'>Custom</span>{' '}
-                Phone Case
+                Your Logo on a{' '}
+                <span className='bg-orange-600 px-2 text-white'>Custom</span>{' '}
+                Gato Tee
               </h1>
               <p className='mt-8 text-lg lg:pr-10 max-w-prose text-center lg:text-left text-balance md:text-wrap'>
-                Capture your favorite memories with your own,{' '}
-                <span className='font-semibold'>one-of-one</span> phone case.
-                CaseCobra allows you to protect your memories, not just your
-                phone case.
+              Bring your brand to life with our custom-designed,{' '}
+                <span className='font-semibold'>one-of-one</span> Tech Tee.
+                Whether you need shirts for your team, events, or promotions.
+                we make the process simple and seamless. Let’s design shirts that stand out!
               </p>
 
               <ul className='mt-8 space-y-2 text-left font-medium flex flex-col items-center sm:items-start'>
                 <div className='space-y-2'>
                   <li className='flex gap-1.5 items-center text-left'>
                     <Check className='h-5 w-5 shrink-0 text-green-600' />
-                    High-quality, durable material
+                    High-quality, Eco-friendly material
                   </li>
                   <li className='flex gap-1.5 items-center text-left'>
                     <Check className='h-5 w-5 shrink-0 text-green-600' />5 year
@@ -42,7 +42,7 @@ export default function Home() {
                   </li>
                   <li className='flex gap-1.5 items-center text-left'>
                     <Check className='h-5 w-5 shrink-0 text-green-600' />
-                    Modern iPhone models supported
+                    Custom models supported
                   </li>
                 </div>
               </ul>
@@ -103,7 +103,7 @@ export default function Home() {
                 src='/line.png'
                 className='absolute w-20 -left-6 -bottom-6 select-none'
               />
-              <Phone className='w-64' imgSrc='/testimonials/1.jpg' />
+              <Phone className='w-150' imgSrc='testimonials/1.jpg' />
             </div>
           </div>
         </MaxWidthWrapper>
@@ -117,7 +117,7 @@ export default function Home() {
               What our{' '}
               <span className='relative px-2'>
                 customers{' '}
-                <Icons.underline className='hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-green-500' />
+                <Icons.underline className='hidden sm:block pointer-events-none absolute inset-x-0 -bottom-6 text-orange-600' />
               </span>{' '}
               say
             </h2>
@@ -135,12 +135,12 @@ export default function Home() {
               </div>
               <div className='text-lg leading-8'>
                 <p>
-                  "The case feels durable and I even got a compliment on the
-                  design. Had the case for two and a half months now and{' '}
-                  <span className='p-0.5 bg-slate-800 text-white'>
-                    the image is super clear
+                  "The shirt feels durable and I even got a compliment on the
+                  design. Had the shirt for two and a half months now and{' '}
+                  <span className='p-0.5 bg-orange-600 text-white'>
+                    the Print is super clear
                   </span>
-                  , on the case I had before, the image started fading into
+                  , on the shirts I had before, the logo started fading into
                   yellow-ish color after a couple weeks. Love it."
                 </p>
               </div>
@@ -171,11 +171,11 @@ export default function Home() {
               </div>
               <div className='text-lg leading-8'>
                 <p>
-                  "I usually keep my phone together with my keys in my pocket
-                  and that led to some pretty heavy scratchmarks on all of my
-                  last phone cases. This one, besides a barely noticeable
+                  "I usually wear my shirts while doing all kinds of activities. 
+                  which has left my old ones looking worn out pretty quickly.
+                  This one, besides a barely noticeable
                   scratch on the corner,{' '}
-                  <span className='p-0.5 bg-slate-800 text-white'>
+                  <span className='p-0.5 bg-orange-600 text-white'>
                     looks brand new after about half a year
                   </span>
                   . I dig it."
@@ -209,9 +209,9 @@ export default function Home() {
           <div className='mb-12 px-6 lg:px-8'>
             <div className='mx-auto max-w-2xl sm:text-center'>
               <h2 className='order-1 mt-2 tracking-tight text-center text-balance !leading-tight font-bold text-5xl md:text-6xl text-gray-900'>
-                Upload your photo and get{' '}
-                <span className='relative px-2 bg-green-600 text-white'>
-                  your own case
+                Upload your Logo and get{' '}
+                <span className='relative px-2 bg-orange-600 text-white'>
+                  your own Design
                 </span>{' '}
                 now
               </h2>
@@ -239,15 +239,15 @@ export default function Home() {
           <ul className='mx-auto mt-12 max-w-prose sm:text-lg space-y-2 w-fit'>
             <li className='w-fit'>
               <Check className='h-5 w-5 text-green-600 inline mr-1.5' />
-              High-quality silicone material
+              High-quality Eco-friendly material
             </li>
             <li className='w-fit'>
               <Check className='h-5 w-5 text-green-600 inline mr-1.5' />
-              Scratch- and fingerprint resistant coating
+              Scratch resistant material
             </li>
             <li className='w-fit'>
               <Check className='h-5 w-5 text-green-600 inline mr-1.5' />
-              Wireless charging compatible
+              Durable Quality
             </li>
             <li className='w-fit'>
               <Check className='h-5 w-5 text-green-600 inline mr-1.5' />5 year
@@ -261,7 +261,7 @@ export default function Home() {
                   className: 'mx-auto mt-8',
                 })}
                 href='/configure/upload'>
-                Create your case now <ArrowRight className='h-4 w-4 ml-1.5' />
+                Create your Desing now <ArrowRight className='h-4 w-4 ml-1.5' />
               </Link>
             </div>
           </ul>
