@@ -68,16 +68,40 @@ export const MODELS = {
 } as const
 
 export const MATERIALS = {
-  name: 'material',
+  name: 'Size Break',
   options: [
     {
-      label: 'Silicone',
+      label: 'Extra Small',
       value: 'silicone',
       description: undefined,
       price: PRODUCT_PRICES.material.silicone,
     },
     {
-      label: 'Soft Polycarbonate',
+      label: 'Small',
+      value: 'silicone',
+      description: undefined,
+      price: PRODUCT_PRICES.material.silicone,
+    },
+    {
+      label: 'Medium',
+      value: 'silicone',
+      description: undefined,
+      price: PRODUCT_PRICES.material.silicone,
+    },
+    {
+      label: 'Large',
+      value: 'silicone',
+      description: undefined,
+      price: PRODUCT_PRICES.material.silicone,
+    },
+    {
+      label: 'Extra Large',
+      value: 'silicone',
+      description: undefined,
+      price: PRODUCT_PRICES.material.silicone,
+    },
+    {
+      label: 'Extra Extra large',
       value: 'polycarbonate',
       description: 'Scratch-resistant coating',
       price: PRODUCT_PRICES.material.polycarbonate,
