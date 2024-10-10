@@ -68,7 +68,7 @@ export const MODELS = {
 } as const
 
 export const MATERIALS = {
-  name: 'Size Break',
+  name: 'material',
   options: [
     {
       label: 'Extra Small',
