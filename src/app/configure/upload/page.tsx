@@ -89,7 +89,7 @@ const Page = () => {
                   </div>
                 ) : isPending ? (
                   <div className='flex flex-col items-center'>
-                    <p>Mixing and Maxing...</p>
+                    <p>Mixing and Maxing..</p>
                   </div>
                 ) : isDragOver ? (
                   <p>
