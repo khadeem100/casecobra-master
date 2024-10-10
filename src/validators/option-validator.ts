@@ -7,7 +7,52 @@ import { PRODUCT_PRICES } from '@/config/products'
 export const COLORS = [
   { label: 'Black', value: 'black', tw: 'zinc-900' },
   {
-    label: 'Blue',
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
+    value: 'blue',
+    tw: 'blue-950',
+  },
+  {
+    label: 'Azure',
     value: 'blue',
     tw: 'blue-950',
   },
@@ -15,30 +60,30 @@ export const COLORS = [
 ] as const
 
 export const MODELS = {
-  name: 'models',
+  name: 'Size Break',
   options: [
     {
-      label: 'iPhone X',
+      label: 'Extra Small',
       value: 'iphonex',
     },
     {
-      label: 'iPhone 11',
+      label: 'Small',
       value: 'iphone11',
     },
     {
-      label: 'iPhone 12',
+      label: 'Medium',
       value: 'iphone12',
     },
     {
-      label: 'iPhone 13',
+      label: 'Large',
       value: 'iphone13',
     },
     {
-      label: 'iPhone 14',
+      label: 'Extra Large',
       value: 'iphone14',
     },
     {
-      label: 'iPhone 15',
+      label: 'Extra Extra Large',
       value: 'iphone15',
     },
   ],

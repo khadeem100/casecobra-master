@@ -224,7 +224,7 @@ const DesignConfigurator = ({
 
           <div className='px-8 pb-12 pt-8'>
             <h2 className='tracking-tight font-bold text-3xl'>
-              Customize your case
+              Customize your Tee
             </h2>
 
             <div className='w-full h-px bg-zinc-200 my-6' />
@@ -265,7 +265,7 @@ const DesignConfigurator = ({
                 </RadioGroup>
 
                 <div className='relative flex flex-col gap-3 w-full'>
-                  <Label>Model</Label>
+                  <Label>Gender</Label>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button
