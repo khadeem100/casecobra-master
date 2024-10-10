@@ -57,18 +57,14 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
   const handleCheckout = () => {
     if (user) {
-      // Instead of creating a Stripe session, log the order or send it via email
-      const orderDetails = { configId: id };
-      saveOrder(orderDetails); // You can create this function to save or send the order details
-  
-      alert('Order placed successfully without payment!');
+      // create payment session
+      createPaymentSession({ configId: id })
     } else {
-      // Redirect to login
-      localStorage.setItem('configurationId', id);
-      setIsLoginModalOpen(true);
+      // need to log in
+      localStorage.setItem('configurationId', id)
+      setIsLoginModalOpen(true)
     }
-  };
-  
+  }
 
   return (
     <>
