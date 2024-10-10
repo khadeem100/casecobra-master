@@ -5,85 +5,63 @@
 import { PRODUCT_PRICES } from '@/config/products'
 
 export const COLORS = [
-  { label: 'Black', value: 'black', tw: 'zinc-900' },
+  { label: 'Male', value: 'black', tw: 'zinc-900' },
   {
-    label: 'Azure',
+    label: 'Female',
     value: 'blue',
     tw: 'blue-950',
   },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  {
-    label: 'Azure',
-    value: 'blue',
-    tw: 'blue-950',
-  },
-  { label: 'Rose', value: 'rose', tw: 'rose-950' },
 ] as const
 
 export const MODELS = {
-  name: 'Size Break',
+  name: 'Colors',
   options: [
     {
-      label: 'Extra Small',
+      label: 'Azure',
       value: 'iphonex',
     },
     {
-      label: 'Small',
+      label: 'Black',
       value: 'iphone11',
     },
     {
-      label: 'Medium',
+      label: 'Magenta',
       value: 'iphone12',
     },
     {
-      label: 'Large',
+      label: 'Neon Yellow',
       value: 'iphone13',
     },
     {
-      label: 'Extra Large',
+      label: 'Lime',
       value: 'iphone14',
     },
     {
-      label: 'Extra Extra Large',
+      label: 'Sun Yellow',
+      value: 'iphone15',
+    },
+    {
+      label: 'Orange',
+      value: 'iphone15',
+    },
+    {
+      label: 'Violet',
+      value: 'iphone15',
+    },
+    {
+      label: 'Royal Blue',
+      value: 'iphone15',
+    },
+    {
+      label: 'Green',
+      value: 'iphone15',
+    },
+    {
+      label: 'Red',
+      value: 'iphone15',
+    },
+    {
+      label: 'White',
       value: 'iphone15',
     },
   ],
