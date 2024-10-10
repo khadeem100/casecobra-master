@@ -34,7 +34,7 @@ const Page = () => {
 
     toast({
       title: `${file.file.type} type is not supported.`,
-      description: "Please choose a PNG, JPG, or JPEG image instead.",
+      description: "Please choose a .AI image instead.",
       variant: "destructive"
     })
   }
@@ -61,8 +61,8 @@ const Page = () => {
           onDropAccepted={onDropAccepted}
           accept={{
             'image/png': ['.png'],
-            'image/jpeg': ['.jpeg'],
-            'image/jpg': ['.jpg'],
+            'image/svg': ['.svg'],
+            'image/psd': ['.psd'],
           }}
           onDragEnter={() => setIsDragOver(true)}
           onDragLeave={() => setIsDragOver(false)}>
@@ -89,7 +89,7 @@ const Page = () => {
                   </div>
                 ) : isPending ? (
                   <div className='flex flex-col items-center'>
-                    <p>Redirecting, please wait...</p>
+                    <p>Mixing and Maxing...</p>
                   </div>
                 ) : isDragOver ? (
                   <p>
@@ -104,7 +104,7 @@ const Page = () => {
               </div>
 
               {isPending ? null : (
-                <p className='text-xs text-zinc-500'>PNG, JPG, JPEG</p>
+                <p className='text-xs text-zinc-500'>PNG, SVG, AI, PSD</p>
               )}
             </div>
           )}

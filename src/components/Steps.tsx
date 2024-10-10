@@ -5,13 +5,13 @@ import { usePathname } from 'next/navigation'
 
 const STEPS = [
   {
-    name: 'Step 1: Add image',
-    description: 'Choose an image for your case',
+    name: 'Step 1: Add Logo',
+    description: 'Choose an Logo for your design',
     url: '/upload',
   },
   {
     name: 'Step 2: Customize design',
-    description: 'Make the case yours',
+    description: 'Configure the placements',
     url: '/design',
   },
   {
