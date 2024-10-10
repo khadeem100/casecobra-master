@@ -103,7 +103,7 @@ export const MATERIALS = {
     {
       label: 'Extra Extra large',
       value: 'polycarbonate',
-      description: 'Scratch-resistant coating',
+      description: undefined,
       price: PRODUCT_PRICES.material.polycarbonate,
     },
   ],
