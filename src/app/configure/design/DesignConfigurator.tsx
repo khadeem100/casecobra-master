@@ -156,20 +156,32 @@ const DesignConfigurator = ({
       <div
         ref={containerRef}
         className='relative h-[37.5rem] overflow-hidden col-span-2 w-full max-w-4xl flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'>
-        <div className='relative w-60 bg-opacity-50 pointer-events-none aspect-[1896/1831]'>
-          <AspectRatio
-            ref={phoneCaseRef}
-            ratio={3 / 4}
-            className='pointer-events-none relative z-50 aspect-[3/4] w-full'>
-          </AspectRatio>
-          <div className='absolute z-40 inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px] shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]' />
-          <div
-            className={cn(
-              'absolute inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px]',
-              `bg-${options.color.tw}`
-            )}
-          />
+        <div className='relative w-60 bg-opacity-50 pointer-events-none'>
+        <div className="relative z-50 w-full">
+          <svg viewBox="0 0 300 400" className="w-full h-auto pointer-events-none">
+            <defs>
+              <clipPath id="tshirt-shape">
+                <path d="M50,50 h200 v100 h50 l-50,150 h-200 l-50,-150 h50z"/>
+              </clipPath>
+            </defs>
+            <image
+              href={imageUrl}
+              width="100%"
+              height="100%"
+              clipPath="url(#tshirt-shape)"
+              preserveAspectRatio="xMidYMid slice"
+            />
+          </svg>
         </div>
+        <div className='absolute z-40 inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px] shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]' />
+        <div
+          className={cn(
+            'absolute inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px]',
+            `bg-${options.color.tw}`
+          )}
+        />
+      </div>
+
 
         <Rnd
           default={{
