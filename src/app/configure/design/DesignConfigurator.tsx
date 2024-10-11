@@ -159,8 +159,8 @@ const DesignConfigurator = ({
         <div className='relative w-60 bg-opacity-50 pointer-events-none aspect-[896/1831]'>
           <AspectRatio
             ref={phoneCaseRef}
-            ratio={1500 / 1831}
-            className='pointer-events-none relative z-50 aspect-[1500/1831] w-full'>
+            ratio={3 / 4}
+            className='pointer-events-none relative z-50 aspect-[3/4] w-full'>
             <NextImage
               fill
               alt='phone image'
