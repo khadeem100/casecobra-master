@@ -103,9 +103,9 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
             <div>
               <p className='font-medium text-zinc-950'>What happens now ?</p>
               <ol className='mt-3 text-zinc-700 list-disc list-inside'>
-                <li>Your design will be send to us </li>
+                <li>Your design will be sent to us </li>
                 <li>Your design will be reviewed for missing data</li>
-                <li>A offer will drafted and send to you</li>
+                <li>A offer will be drafted and sent to you</li>
                 <li>You'll receive a mail containing your inquiry</li>
                 <li>After Succesfully agreeing, Well begin the printing process</li>
               </ol>
@@ -115,7 +115,7 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
               <ol className='mt-3 text-zinc-700 list-disc list-inside'>
                 <li>You have chosen the right specs</li>
                 <li>The Logo is at your desired position and size</li>
-                <li>Make sure you click save desing only when absolutely sure</li>
+                <li>Make sure you click the save design button only when absolutely sure</li>
               </ol>
             </div>
           </div>

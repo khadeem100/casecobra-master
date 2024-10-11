@@ -156,7 +156,7 @@ const DesignConfigurator = ({
       <div
         ref={containerRef}
         className='relative h-[37.5rem] overflow-hidden col-span-2 w-full max-w-4xl flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'>
-        <div className='relative w-60 bg-opacity-50 pointer-events-none aspect-[896/1831]'>
+        <div className='relative w-60 bg-opacity-50 pointer-events-none aspect-[1896/1831]'>
           <AspectRatio
             ref={phoneCaseRef}
             ratio={3 / 4}
