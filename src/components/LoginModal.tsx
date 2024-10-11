@@ -30,22 +30,22 @@ const LoginModal = ({
             />
           </div>
           <DialogTitle className='text-3xl text-center font-bold tracking-tight text-gray-900'>
-            Log in to continue
+            Confirm your design
           </DialogTitle>
           <DialogDescription className='text-base text-center py-2'>
             <span className='font-medium text-zinc-900'>
-              Your configuration was saved!
+              By clicking confirm !
             </span>{' '}
-            Please login or create an account to complete your purchase.
+            You agree that the Design you have submitted is created to your wishes.
           </DialogDescription>
         </DialogHeader>
 
         <div className='grid grid-cols-2 gap-6 divide-x divide-gray-200'>
           <LoginLink className={buttonVariants({ variant: 'outline' })}>
-            Login
+            Confirm
           </LoginLink>
           <RegisterLink className={buttonVariants({ variant: 'default' })}>
-            Sign up
+            Contact us
           </RegisterLink>
         </div>
       </DialogContent>

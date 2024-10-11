@@ -90,30 +90,32 @@ const DesignPreview = ({ configuration }: { configuration: Configuration }) => {
 
         <div className='mt-6 sm:col-span-9 md:row-end-1'>
           <h3 className='text-3xl font-bold tracking-tight text-gray-900'>
-            Your {modelLabel} Case
+            Your Custom {modelLabel} GATO TECH TEE
           </h3>
           <div className='mt-3 flex items-center gap-1.5 text-base'>
             <Check className='h-4 w-4 text-green-500' />
-            In stock and ready to ship
+            READY TO CONFIRM
           </div>
         </div>
 
         <div className='sm:col-span-12 md:col-span-9 text-base'>
           <div className='grid grid-cols-1 gap-y-8 border-b border-gray-200 py-8 sm:grid-cols-2 sm:gap-x-6 sm:py-6 md:py-10'>
             <div>
-              <p className='font-medium text-zinc-950'>Highlights</p>
+              <p className='font-medium text-zinc-950'>What happens now ?</p>
               <ol className='mt-3 text-zinc-700 list-disc list-inside'>
-                <li>Wireless charging compatible</li>
-                <li>TPU shock absorption</li>
-                <li>Packaging made from recycled materials</li>
-                <li>5 year print warranty</li>
+                <li>Your design will be send to us </li>
+                <li>Your design will be reviewed for missing data</li>
+                <li>A offer will drafted and send to you</li>
+                <li>You'll receive a mail containing your inquiry</li>
+                <li>After Succesfully agreeing, Well begin the printing process</li>
               </ol>
             </div>
             <div>
-              <p className='font-medium text-zinc-950'>Materials</p>
+              <p className='font-medium text-zinc-950'>Please Dubble Check</p>
               <ol className='mt-3 text-zinc-700 list-disc list-inside'>
-                <li>High-quality, durable material</li>
-                <li>Scratch- and fingerprint resistant coating</li>
+                <li>You have chosen the right specs</li>
+                <li>The Logo is at your desired position and size</li>
+                <li>Make sure you click save desing only when absolutely sure</li>
               </ol>
             </div>
           </div>

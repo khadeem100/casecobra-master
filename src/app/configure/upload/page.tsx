@@ -60,9 +60,9 @@ const Page = () => {
           onDropRejected={onDropRejected}
           onDropAccepted={onDropAccepted}
           accept={{
-            'image/png': ['.png'],
+            'image/pdf': ['.pdf'],
             'image/svg': ['.svg'],
-            'image/psd': ['.psd'],
+            'image/eps': ['.eps'],
             'image/ai': ['.ai'],
           }}
           onDragEnter={() => setIsDragOver(true)}
@@ -90,7 +90,7 @@ const Page = () => {
                   </div>
                 ) : isPending ? (
                   <div className='flex flex-col items-center'>
-                    <p>Mixing and Maxing...</p>
+                    <p>Working some GATO MAGIC...</p>
                   </div>
                 ) : isDragOver ? (
                   <p>
@@ -105,7 +105,7 @@ const Page = () => {
               </div>
 
               {isPending ? null : (
-                <p className='text-xs text-zinc-500'>PNG, SVG, AI, PSD</p>
+                <p className='text-xs text-zinc-500'>EPS, SVG, AI, PDF</p>
               )}
             </div>
           )}
