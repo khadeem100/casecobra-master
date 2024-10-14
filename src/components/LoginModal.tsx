@@ -42,10 +42,10 @@ const LoginModal = ({
 
         <div className='grid grid-cols-2 gap-6 divide-x divide-gray-200'>
           <LoginLink className={buttonVariants({ variant: 'outline' })}>
-            Confirm
+            Login
           </LoginLink>
           <RegisterLink className={buttonVariants({ variant: 'default' })}>
-            Contact us
+             Sign up
           </RegisterLink>
         </div>
       </DialogContent>
