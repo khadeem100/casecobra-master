@@ -8,7 +8,7 @@ import { Image, Loader2, MousePointerSquareDashed } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useState, useTransition } from 'react'
 import Dropzone, { FileRejection } from 'react-dropzone'
-import { Dialog } from '@headlessui/react' // Ensure this package is installed
+import { Dialog } from '@headlessui/react'
 
 const Page = () => {
   const { toast } = useToast()
@@ -19,49 +19,52 @@ const Page = () => {
   const [isModalOpen, setIsModalOpen] = useState<boolean>(false) // State for modal
   const router = useRouter()
 
+  // Updated to handle multiple uploads
   const { startUpload, isUploading } = useUploadThing('imageUploader', {
-    onClientUploadComplete: ([data]) => {
-      const configId = data.serverData.configId
+    onClientUploadComplete: (data) => {
+      const configIds = data.map(item => item.serverData.configId); // Collect all configIds
       startTransition(() => {
-        router.push(`/configure/design?id=${configId}`)
-      })
+        router.push(`/configure/design?id=${configIds.join(',')}`); // Use a comma-separated list of IDs
+      });
     },
     onUploadProgress(p) {
-      setUploadProgress(p)
+      setUploadProgress(p);
     },
-  })
+  });
 
   const onDropRejected = (rejectedFiles: FileRejection[]) => {
-    const [file] = rejectedFiles
+    const [file] = rejectedFiles;
 
-    setIsDragOver(false)
+    setIsDragOver(false);
 
     toast({
       title: `${file.file.type} type is not supported.`,
       description: "Please choose a .AI image instead.",
       variant: "destructive"
-    })
+    });
   }
 
   const onDropAccepted = (acceptedFiles: File[]) => {
     if (!isVisualized) {
-      setIsModalOpen(true) // Open modal if not visualized
+      setIsModalOpen(true); // Open modal if not visualized
       return; // Prevent upload
     }
-    startUpload(acceptedFiles, { configId: undefined })
 
-    setIsDragOver(false)
+    // Start uploading multiple accepted files
+    startUpload(acceptedFiles, { configId: undefined });
+
+    setIsDragOver(false);
   }
 
-  const [isPending, startTransition] = useTransition()
+  const [isPending, startTransition] = useTransition();
 
   // Function to open the new URL with loading effect
   const openTshirtDesigner = () => {
-    setIsLoading(true)
+    setIsLoading(true);
     setTimeout(() => {
       window.open("https://threejs-t-shirt-main.vercel.app/", "_blank");
       setIsVisualized(true); // Set visualized state to true
-      setIsLoading(false)
+      setIsLoading(false);
     }, 1000); // Simulate loading delay (e.g., 1 second)
   }
 
@@ -88,7 +91,9 @@ const Page = () => {
             'image/ai': ['.ai'],
           }}
           onDragEnter={() => setIsDragOver(true)}
-          onDragLeave={() => setIsDragOver(false)}>
+          onDragLeave={() => setIsDragOver(false)}
+          multiple // Allow multiple files
+        >
           {({ getRootProps, getInputProps }) => (
             <div
               className='h-full w-full flex-1 flex flex-col items-center justify-center'
@@ -153,7 +158,7 @@ const Page = () => {
             <div className="bg-white rounded-lg p-6 mx-4 max-w-sm text-center">
               <Dialog.Title className="text-lg font-bold">WAIT!</Dialog.Title>
               <Dialog.Description className="mt-2 text-sm">
-              To maintain the quality of your submission, please visualize your design prior to uploading your logo.
+                To maintain the quality of your submission, please visualize your design prior to uploading your logo.
               </Dialog.Description>
               <div className="mt-4">
                 <button

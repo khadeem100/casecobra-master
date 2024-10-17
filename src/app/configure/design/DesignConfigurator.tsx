@@ -156,11 +156,31 @@ const DesignConfigurator = ({
       <div
         ref={containerRef}
         className='relative h-[37.5rem] overflow-hidden col-span-2 w-full max-w-4xl flex items-center justify-center rounded-lg border-2 border-dashed border-gray-300 p-12 text-center focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2'>
-        <div className='relative w-60 bg-opacity-50 pointer-events-none aspect-[1896/1831]'>
+        <div className='relativew-40 bg-opacity-50 pointer-events-none aspect-[890/83]'>
+          {/* Ruler Line on Top */}
+          {/* Ruler Line on Top */}
+          <div className='absolute bottom-0 left-0 right-0 flex justify-between z-40 bg-orange-700 p-'>
+            <div className='w-12 h-6 text-center'>0</div>
+            <div className='w-12 h-6 text-center'>10</div>
+            <div className='w-12 h-6 text-center'>20</div>
+            <div className='w-12 h-6 text-center'>30</div>
+            <div className='w-12 h-6 text-center'>40</div>
+          </div>
+
+          {/* Ruler Line on Side */}
+          <div className='absolute left-0 top-0 bottom-0 flex flex-col justify-between z-50 bg-orange-700 p-'>
+            <div className='h-12 text-center mb-2'>40</div>
+            <div className='h-12 text-center mb-2'>30</div>
+            <div className='h-12 text-center mb-2'>20</div>
+            <div className='h-12 text-center mb-2'>10</div>
+            <div className='h-12 text-center mb-2'>0</div>
+          </div>
+
+
           <AspectRatio
             ref={phoneCaseRef}
-            ratio={3 / 4}
-            className='pointer-events-none relative z-50 aspect-[3/4] w-full'>
+            ratio={2 / 4}
+            className='pointer-events-none relative z-50 aspect-[2/4] w-full'>
           </AspectRatio>
           <div className='absolute z-40 inset-0 left-[3px] top-px right-[3px] bottom-px rounded-[32px] shadow-[0_0_0_99999px_rgba(229,231,235,0.6)]' />
           <div
@@ -170,6 +190,7 @@ const DesignConfigurator = ({
             )}
           />
         </div>
+
 
         <Rnd
           default={{
@@ -233,7 +254,7 @@ const DesignConfigurator = ({
                       color: val,
                     }))
                   }}>
-                  <Label>Color: {options.color.label}</Label>
+                  <Label>Gender: {options.color.label}</Label>
                   <div className='mt-3 flex items-center space-x-3'>
                     {COLORS.map((color) => (
                       <RadioGroup.Option
@@ -259,7 +280,7 @@ const DesignConfigurator = ({
                 </RadioGroup>
 
                 <div className='relative flex flex-col gap-3 w-full'>
-                  <Label>Gender</Label>
+                  <Label>Color</Label>
                   <DropdownMenu>
                     <DropdownMenuTrigger asChild>
                       <Button

@@ -68,60 +68,78 @@ export const MODELS = {
 } as const
 
 export const MATERIALS = {
-  name: 'material',
+  name: 'Size Break',
   options: [
     {
       label: 'Extra Small',
       value: 'silicone',
       description: undefined,
       price: PRODUCT_PRICES.material.silicone,
+      quantity: 1,
     },
     {
       label: 'Small',
       value: 'silicone',
       description: undefined,
       price: PRODUCT_PRICES.material.silicone,
+      quantity: 1,
     },
     {
       label: 'Medium',
       value: 'silicone',
       description: undefined,
       price: PRODUCT_PRICES.material.silicone,
+      quantity: 1,
     },
     {
       label: 'Large',
       value: 'silicone',
       description: undefined,
       price: PRODUCT_PRICES.material.silicone,
+      quantity: 1,
     },
     {
       label: 'Extra Large',
       value: 'silicone',
       description: undefined,
       price: PRODUCT_PRICES.material.silicone,
+      quantity: 1,
     },
     {
       label: 'Extra Extra large',
       value: 'polycarbonate',
       description: undefined,
       price: PRODUCT_PRICES.material.polycarbonate,
+      quantity: 1,
     },
   ],
 } as const
 
 export const FINISHES = {
-  name: 'finish',
+  name: 'Print',
   options: [
     {
-      label: 'Smooth Finish',
+      label: 'Front Print',
       value: 'smooth',
       description: undefined,
       price: PRODUCT_PRICES.finish.smooth,
     },
     {
-      label: 'Textured Finish',
+      label: 'Back Print',
       value: 'textured',
-      description: 'Soft grippy texture',
+      description: undefined,
+      price: PRODUCT_PRICES.finish.textured,
+    },
+    {
+      label: 'Left Sleeve Print',
+      value: 'smooth',
+      description: undefined,
+      price: PRODUCT_PRICES.finish.smooth,
+    },
+    {
+      label: 'Right Sleeve Print',
+      value: 'textured',
+      description: undefined,
       price: PRODUCT_PRICES.finish.textured,
     },
   ],
