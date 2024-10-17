@@ -8,11 +8,15 @@ import { Image, Loader2, MousePointerSquareDashed } from 'lucide-react'
 import { useRouter } from 'next/navigation'
 import { useState, useTransition } from 'react'
 import Dropzone, { FileRejection } from 'react-dropzone'
+import { Dialog } from '@headlessui/react' // Ensure this package is installed
 
 const Page = () => {
   const { toast } = useToast()
   const [isDragOver, setIsDragOver] = useState<boolean>(false)
   const [uploadProgress, setUploadProgress] = useState<number>(0)
+  const [isLoading, setIsLoading] = useState<boolean>(false) // State for loading
+  const [isVisualized, setIsVisualized] = useState<boolean>(false) // Track if visualized
+  const [isModalOpen, setIsModalOpen] = useState<boolean>(false) // State for modal
   const router = useRouter()
 
   const { startUpload, isUploading } = useUploadThing('imageUploader', {
@@ -40,12 +44,30 @@ const Page = () => {
   }
 
   const onDropAccepted = (acceptedFiles: File[]) => {
+    if (!isVisualized) {
+      setIsModalOpen(true) // Open modal if not visualized
+      return; // Prevent upload
+    }
     startUpload(acceptedFiles, { configId: undefined })
 
     setIsDragOver(false)
   }
 
   const [isPending, startTransition] = useTransition()
+
+  // Function to open the new URL with loading effect
+  const openTshirtDesigner = () => {
+    setIsLoading(true)
+    setTimeout(() => {
+      window.open("https://threejs-t-shirt-main.vercel.app/", "_blank");
+      setIsVisualized(true); // Set visualized state to true
+      setIsLoading(false)
+    }, 1000); // Simulate loading delay (e.g., 1 second)
+  }
+
+  const closeModal = () => {
+    setIsModalOpen(false);
+  }
 
   return (
     <div
@@ -110,9 +132,43 @@ const Page = () => {
             </div>
           )}
         </Dropzone>
+        {/* Button to open the T-shirt designer */}
+        <button
+          onClick={openTshirtDesigner}
+          className="mt-4 px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-400 flex items-center justify-center">
+          {isLoading ? (
+            <>
+              <Loader2 className='animate-spin h-4 w-4 mr-2' />
+              One second please...
+            </>
+          ) : (
+            'Visualize your design'
+          )}
+        </button>
+
+        {/* Modal for warning */}
+        <Dialog open={isModalOpen} onClose={closeModal} className="fixed z-10 inset-0 overflow-y-auto">
+          <div className="flex items-center justify-center min-h-screen">
+            <Dialog.Overlay className="fixed inset-0 " />
+            <div className="bg-white rounded-lg p-6 mx-4 max-w-sm text-center">
+              <Dialog.Title className="text-lg font-bold">WAIT!</Dialog.Title>
+              <Dialog.Description className="mt-2 text-sm">
+              To maintain the quality of your submission, please visualize your design prior to uploading your logo.
+              </Dialog.Description>
+              <div className="mt-4">
+                <button
+                  onClick={closeModal}
+                  className="px-4 py-2 bg-orange-600 text-white rounded hover:bg-orange-400">
+                  OK
+                </button>
+              </div>
+            </div>
+          </div>
+        </Dialog>
       </div>
     </div>
   )
 }
 
 export default Page
+
