@@ -21,16 +21,17 @@ const Page = () => {
 
   // Updated to handle multiple uploads
   const { startUpload, isUploading } = useUploadThing('imageUploader', {
-    onClientUploadComplete: (data) => {
-      const configIds = data.map(item => item.serverData.configId); // Collect all configIds
+    onClientUploadComplete: ([data]) => {
+      const configId = data.serverData.configId
       startTransition(() => {
-        router.push(`/configure/design?id=${configIds.join(',')}`); // Use a comma-separated list of IDs
-      });
+        router.push(`/configure/design?id=${configId}`)
+      })
     },
     onUploadProgress(p) {
-      setUploadProgress(p);
+      setUploadProgress(p)
     },
-  });
+  })
+
 
   const onDropRejected = (rejectedFiles: FileRejection[]) => {
     const [file] = rejectedFiles;
