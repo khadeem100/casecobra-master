@@ -14,7 +14,7 @@ export const COLORS = [
 ] as const
 
 export const MODELS = {
-  name: 'Colors',
+  name: 'colors',
   options: [
     {
       label: 'Azure',
@@ -68,7 +68,7 @@ export const MODELS = {
 } as const
 
 export const MATERIALS = {
-  name: 'Size Break',
+  name: 'sizebreak',
   options: [
     {
       label: 'Extra Small',
@@ -116,7 +116,7 @@ export const MATERIALS = {
 } as const
 
 export const FINISHES = {
-  name: 'Print',
+  name: 'print',
   options: [
     {
       label: 'Front Print',
