@@ -68,7 +68,7 @@ export const MODELS = {
 } as const
 
 export const MATERIALS = {
-  name: 'sizebreak',
+  name: 'material',
   options: [
     {
       label: 'Extra Small',
@@ -116,7 +116,7 @@ export const MATERIALS = {
 } as const
 
 export const FINISHES = {
-  name: 'print',
+  name: 'finish',
   options: [
     {
       label: 'Front Print',
