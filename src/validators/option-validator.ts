@@ -5,9 +5,9 @@
 import { PRODUCT_PRICES } from '@/config/products'
 
 export const COLORS = [
-  { label: 'Male', value: 'black', tw: 'zinc-900' },
+  { label: 'Female', value: 'black', tw: 'rose-950' },
   {
-    label: 'Female',
+    label: 'Male',
     value: 'blue',
     tw: 'blue-950',
   },
